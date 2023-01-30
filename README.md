@@ -27,6 +27,7 @@ Optional configuration:
 
 ```yaml
 node_modules:
+  modules_dir: node_modules
   assets:
     js: assets/scripts
     css: assets/styles
