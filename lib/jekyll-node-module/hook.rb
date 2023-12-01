@@ -4,7 +4,7 @@ Jekyll::Hooks.register :site, :post_write do |site|
 
   assets.each do |asset|
     source = File.expand_path(asset['source'], base)
-    target = site.in_dest_dir(asset['target']) || File.basename(source)
+    target = site.in_dest_dir(asset['target'] || File.basename(source))
 
     Jekyll.logger.info 'Copying:', %(#{source} => #{target})
 
