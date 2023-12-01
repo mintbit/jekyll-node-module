@@ -32,14 +32,14 @@ node_modules:
     js: assets/scripts
     css: assets/styles
   copy:
-  - source: font-awesome/fonts/
-    target: assets/fonts
+  - source: "@fortawesome/fontawesome-free/webfonts/"
+    target: assets/webfonts
 ```
 
 ## Usage
 
 ```html
-<link rel="stylesheet" href="{{ 'font-awesome/css/font-awesome.css' | node_module_url }}" />
+<link rel="stylesheet" href="{{ '@fortawesome/fontawesome-free/css/all.min.css' | node_module_url }}" />
 <script src="{{ 'jquery/dist/jquery.js' | node_module_url }}"></script>
 ```
 
