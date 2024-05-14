@@ -1,6 +1,8 @@
 module Jekyll
   module NodeModule
     module Filters
+      include Jekyll::Filters::URLFilters
+
       def node_module_url(input)
         site = @context.registers[:site]
         base = site.config.dig('node_modules', 'modules_dir') || site.in_source_dir('node_modules')
@@ -10,7 +12,7 @@ module Jekyll
           site.static_files << file
         end
 
-        file.url
+        relative_url(file.url)
       end
     end
   end

@@ -3,7 +3,7 @@ module Jekyll
     class Asset < StaticFile
       def initialize(site, base, dir, name)
         super
-        @relative_path = File.join(@site.config['baseurl'] || '', destination_rel_dir, @name)
+        @relative_path = File.join(destination_rel_dir, @name)
       end
 
       def destination(dest)
