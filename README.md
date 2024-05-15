@@ -43,6 +43,16 @@ node_modules:
 <script src="{{ 'jquery/dist/jquery.js' | node_module_url }}"></script>
 ```
 
+If you're using a custom `baseurl` (either by setting the `baseurl` option in
+the `_config.yml` file, either by passing the `--baseurl` argument to the
+`build` and/or `serve` command), you need to use the `relative_url` filter as
+well:
+
+```html
+<link rel="stylesheet" href="{{ '@fortawesome/fontawesome-free/css/all.min.css' | node_module_url | relative_url }}" />
+<script src="{{ 'jquery/dist/jquery.js' | node_module_url | relative_url }}"></script>
+```
+
 ## Issues
 
 Need help? Please create a [GitHub Issue](https://github.com/mintbit/jekyll-node-module/issues) and provide as much useful information as possible.
