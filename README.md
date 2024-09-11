@@ -44,7 +44,7 @@ node_modules:
 ```
 
 If you're using a custom `baseurl` (either by setting the `baseurl` option in
-the `_config.yml` file, either by passing the `--baseurl` argument to the
+the `_config.yml` file, or by passing the `--baseurl` argument to the
 `build` and/or `serve` command), you need to use the `relative_url` filter as
 well:
 
