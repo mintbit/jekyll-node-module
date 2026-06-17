@@ -13,25 +13,25 @@ updates:
     schedule:
       interval: "daily"
     open-pull-requests-limit: 99
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    cooldown:
+      semver-patch-days: 7
+      semver-minor-days: 14
     groups:
       npm-minor-patch:
         patterns: ["*"]
         update-types: ["minor", "patch"]
-    cooldown:
-      semver-patch-days: 7
-      semver-minor-days: 14
-      semver-major-days: 30
 
   - package-ecosystem: "bundler"
     directory: "/"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 99
-    groups:
-      ruby-minor-patch:
-        patterns: ["*"]
-        update-types: ["minor", "patch"]
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
     cooldown:
       semver-patch-days: 7
       semver-minor-days: 14
-      semver-major-days: 30
