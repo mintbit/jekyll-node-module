@@ -1,0 +1,11 @@
+{
+	"name": "Jekyll",
+	"dockerComposeFile": "compose.yaml",
+	"service": "jekyll",
+	"workspaceFolder": "/workspace",
+	"forwardPorts": [
+		4000
+	],
+	"remoteUser": "vscode",
+	"postStartCommand": "mise install"
+}

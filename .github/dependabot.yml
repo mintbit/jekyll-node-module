@@ -35,3 +35,11 @@ updates:
     cooldown:
       semver-patch-days: 7
       semver-minor-days: 14
+
+  - package-ecosystem: "docker"
+    directory: "/.devcontainer"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 99
+    cooldown:
+      default-days: 7

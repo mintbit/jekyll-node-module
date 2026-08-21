@@ -1,0 +1,30 @@
+name: panelio
+services:
+  jekyll:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    environment:
+      JEKYLL_ENV: ${JEKYLL_ENV:-development}
+      MISE_IDIOMATIC_VERSION_FILE_ENABLE_TOOLS: "node,ruby"
+      MISE_RUBY_COMPILE: "false"
+      MISE_NODE_COREPACK: "true"
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace
+      - home-vscode:/home/vscode
+      - node-modules:/workspace/node_modules
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    ports:
+      - "127.0.0.1:4000:4000"
+    # tty: true
+    # stdin_open: true
+    command: sleep infinity
+    user: vscode
+
+volumes:
+  home-vscode:
+  node-modules:
