@@ -1,5 +1,5 @@
 # Pinned to devcontainers/base version 2.1.9 on Debian 13 (Trixie)
-FROM mcr.microsoft.com/devcontainers/base:2.1.9@sha256:a07f1804d8e665ff64bf6adcd60f4d9b9223dc52ee18a1f1a7a8e1ee1a134d34
+FROM mcr.microsoft.com/devcontainers/base:2.1.13@sha256:025b74bb5f7ac53edd77e01aa7188c359aab100e23a2f6220bde50bbb9fd31dd
 
 # Disable lifecycle scripts to reduce supply chain risk
 ENV NPM_CONFIG_IGNORE_SCRIPTS=true \
